@@ -1,0 +1,84 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3em 2.1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+}
+
+.companName{
+  font-family: "Bebas Neue", serif;
+  letter-spacing: .7px;
+  color: #333;
+}
+
+.navLink{
+  display: flex;
+  gap: 1.4em;
+}
+
+.navLink a{
+  font-family: "Parkinsans", sans-serif;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.menu-icon{
+  display: none;
+  font-size: 1.9em;
+  cursor: pointer;
+  color: #333;
+}
+
+.menu-checkbox{
+  display: none;
+}
+
+.home:hover{
+  color: #FF007F;
+}
+
+.browse:hover{
+  color: #00BFFF;
+}
+
+.add_books:hover{
+  color: #00FF00;
+}
+
+.wishlist:hover{
+  color: #FF0000;
+}
+
+@media (max-width: 590px){
+  .navLink{
+    display: none;
+    flex-direction: column;
+    background-color: azure;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .burgerIcon{
+    display: block;
+  }  
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-checkbox:checked + .menu-icon + .navLink {
+    display: flex;
+  }
+}
