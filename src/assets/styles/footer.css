@@ -1,0 +1,25 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1.3em;
+  background-color: #333;
+  font-size: 14px;
+}
+
+.footer-text{
+  color: white;
+  font-family: "Parkinsans", sans-serif;;
+}
+
+@media (max-width: 768px) {
+  .footer{
+    display: none;
+  }
+}

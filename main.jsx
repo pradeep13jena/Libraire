@@ -6,6 +6,7 @@ import Home from './src/components/Home'
 import Browse from './src/components/Browse'
 import Addbooks from './src/components/Addbooks'
 import Wishlist from './src/components/Wishlist'
+import Genre from './src/components/Genre'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,9 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home/>
+      }, {
+        path: '/genre/:genre',
+        element: <Genre/>
       }, {
         path: '/browse',
         element: <Browse/>

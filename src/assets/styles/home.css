@@ -1,0 +1,111 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Scrollbar details */
+
+.genreShoe::-webkit-scrollbar {
+  height: 8px;
+}
+
+.genreShoe::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle (scrollbar thumb) */
+.genreShoe::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.genreShoe::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sectionHome{
+  max-width: 1300px;
+  margin: 1.3em 0;
+  margin-inline: auto;
+  padding: 1.5em;
+}
+
+.welcome_message{
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  margin: 1em 0;
+}
+
+.welcome_salutation{
+  font-family: "Playfair Display", serif;
+  font-size: 1.6em;
+}
+
+.welcome_text{
+  font-family: "Parkinsans", sans-serif;
+}
+
+/* viewGenre */
+
+.viewGenre{
+  margin: 2.5em 0;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.viewText{
+  font-family: "Playfair Display", serif;
+  font-size: 1.6em;
+  border-bottom: 1px solid darkgrey;
+  padding-bottom: .6em;
+}
+
+.textnameGenre{
+  color: #FF007F;
+}
+
+.textnamePopular{
+  color: #00FF00;
+}
+
+.genreShoe{
+  display: flex;
+  gap: 1.5em;
+  overflow-x: auto;
+  margin-top: 2.5em;
+}
+
+.genre::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.genreShoe img{
+  width: 210px;
+  border-radius: 5px;
+}
+
+@media (max-width: 450px) {
+  .sectionHome{
+    margin: 1em 0;
+    padding: .7em;
+  }
+
+  .welcome_salutation, .viewText{
+    font-size: 1em;
+  }
+
+  .welcome_text{
+    font-size: .8em;
+  }
+  .genreShoe{
+    gap: 1em;
+  }
+
+  .genreShoe img{
+    width: 140px;
+  }
+}

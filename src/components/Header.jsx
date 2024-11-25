@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className='header'>
     <div className='logoDiv'>
-      <Link to={'/'} className='companName'>LIBRARIA</Link>
+      <Link to={'/'} className='companName'>LIBRAIRE</Link>
     </div>
     <div className={`navLink ${isMenuOpen ? 'open' : ''}`}>
       <Link to={'/'} className='home'>Home</Link>
