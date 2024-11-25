@@ -1,12 +1,16 @@
 import { Children } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import App from './src/components/App'
 import Home from './src/components/Home'
 import Browse from './src/components/Browse'
 import Addbooks from './src/components/Addbooks'
 import Wishlist from './src/components/Wishlist'
 import Genre from './src/components/Genre'
+
+import { store } from './src/utils/store.js'
+import { Provider } from 'react-redux'
 
 const router = createBrowserRouter([
   {
@@ -34,5 +38,7 @@ const router = createBrowserRouter([
 
 const root = createRoot(document.getElementById('root'))
 root.render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 )

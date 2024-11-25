@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 // CSS import
 import '../assets/styles/home.css'
 
+// Store import
+import { useDispatch, useSelector } from 'react-redux'
+import { addItem } from '../utils/features/addBooks'
+
 // Image import
 import Adventure from '../assets/images/Adventure.png'
 import Crime from '../assets/images/Crime.jpeg'
@@ -18,6 +22,10 @@ import Thriller from '../assets/images/Thriller.png'
 import Fantasy from '../assets/images/Fantasy.png'
 
 export default function Home() {
+  const books =  useSelector(state => state.books.books);
+  const popularBooks = books.filter(book => book.rating > 4.6)
+
+  
   return (
     <section className='sectionHome'>
       <div className="welcome_message">
@@ -28,17 +36,17 @@ export default function Home() {
       <div className="viewGenre">
         <h1 className='viewText'>View Books by <span className='textnameGenre'>Genre</span></h1>
         <div className="genreShoe">
-          <Link to={'genre/fantasy'}> <img src={Fantasy} alt="Fantasy " /> </Link>
-          <Link to={'genre/mystery'}> <img src={Mystery} alt="Mystery" /> </Link>
-          <Link to={'genre/romance'}> <img src={Romance} alt="Romance" /> </Link>
-          <Link to={'genre/adventure'}> <img src={Adventure} alt="Adventure" /> </Link>
-          <Link to={'genre/horror'}> <img src={Horror} alt="Horror" /> </Link>
-          <Link to={'genre/crime'}> <img src={Crime} alt="Crime" /> </Link>
-          <Link to={'genre/dystopian'}> <img src={Dystopian} alt="Dystopian" /> </Link>
-          <Link to={'genre/scifi'}> <img src={Scifi} alt="Scifi" /> </Link>
-          <Link to={'genre/thriller'}> <img src={Thriller} alt="Thriller" /> </Link>
-          <Link to={'genre/fiction'}> <img src={Fiction} alt="Fiction" /> </Link>
-          <Link to={'genre/historical'}> <img src={Historical} alt="Historical" /> </Link>
+          <Link to={'genre/Mystery'}> <img src={Mystery} alt="Mystery" /> </Link>
+          <Link to={'genre/Romance'}> <img src={Romance} alt="Romance" /> </Link>
+          <Link to={'genre/Thriller'}> <img src={Thriller} alt="Thriller" /> </Link>
+          <Link to={'genre/Dystopian'}> <img src={Dystopian} alt="Dystopian" /> </Link>
+          <Link to={'genre/Horror'}> <img src={Horror} alt="Horror" /> </Link>
+          <Link to={'genre/Adventure'}> <img src={Adventure} alt="Adventure" /> </Link>
+          <Link to={'genre/Crime'}> <img src={Crime} alt="Crime" /> </Link>
+          <Link to={'genre/Science Fiction'}> <img src={Scifi} alt="Scifi" /> </Link>
+          <Link to={'genre/Fantasy'}> <img src={Fantasy} alt="Fantasy " /> </Link>
+          <Link to={'genre/Fiction'}> <img src={Fiction} alt="Fiction" /> </Link>
+          <Link to={'genre/Historical'}> <img src={Historical} alt="Historical" /> </Link>
         </div>
       </div>
       <div className="viewPopularity">
