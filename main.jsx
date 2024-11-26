@@ -8,6 +8,7 @@ import Browse from './src/components/Browse'
 import Addbooks from './src/components/Addbooks'
 import Wishlist from './src/components/Wishlist'
 import Genre from './src/components/Genre'
+import Bdetails from './src/components/Bdetails.jsx'
 
 import { store } from './src/utils/store.js'
 import { Provider } from 'react-redux'
@@ -20,6 +21,9 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home/>
+      }, {
+        path: '/book/:book',
+        element: <Bdetails/>
       }, {
         path: '/genre/:genre',
         element: <Genre/>

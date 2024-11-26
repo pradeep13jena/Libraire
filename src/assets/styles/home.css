@@ -6,23 +6,23 @@
 
 /* Scrollbar details */
 
-.genreShoe::-webkit-scrollbar {
+.genreShoe::-webkit-scrollbar, .popularBooks::-webkit-scrollbar{
   height: 8px;
 }
 
-.genreShoe::-webkit-scrollbar-track {
+.genreShoe::-webkit-scrollbar-track, .popularBooks::-webkit-scrollbar-track{
   background: #f1f1f1;
   border-radius: 10px;
 }
 
 /* Handle (scrollbar thumb) */
-.genreShoe::-webkit-scrollbar-thumb {
+.genreShoe::-webkit-scrollbar-thumb, .popularBooks::-webkit-scrollbar-thumb{
   background: #888;
   border-radius: 10px;
 }
 
 /* Handle on hover */
-.genreShoe::-webkit-scrollbar-thumb:hover {
+.genreShoe::-webkit-scrollbar-thumb:hover, .popularBooks::-webkit-scrollbar-thumb:hover{
   background: #555;
 }
 
@@ -79,13 +79,17 @@
   margin-top: 2.5em;
 }
 
-.genre::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Edge */
-}
-
 .genreShoe img{
   width: 210px;
   border-radius: 5px;
+}
+
+/* Popular Books */
+.popularBooks{
+  display: flex;
+  gap: 1.5em;
+  overflow-x: auto;
+  margin-top: 2.5em;
 }
 
 @media (max-width: 450px) {
