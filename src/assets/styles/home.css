@@ -49,6 +49,51 @@
   font-family: "Parkinsans", sans-serif;
 }
 
+/* Ask me Section */
+.askme{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.askme_disable{
+  display: none;
+}
+
+.askme_form_input{
+  font-family: "Parkinsans", sans-serif;
+  padding: 10px 5em 10px 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+.askme_form_button{
+  font-family: "Parkinsans", sans-serif;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 0 3px 3px 0;
+  border: none;
+  outline: none;
+}
+
+.askme_form_button{
+  background-color: #555;
+  color: white;
+}
+
+.askme_form_button{
+  cursor: pointer;
+}
+
 /* viewGenre */
 
 .viewGenre{
@@ -68,8 +113,16 @@
   color: #FF007F;
 }
 
+.textnameGenre:hover{
+  color: #CC0066;
+}
+
 .textnamePopular{
   color: #00FF00;
+}
+
+.textnamePopular:hover{
+  color: #00B800;
 }
 
 .genreShoe{

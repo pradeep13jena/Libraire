@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 import Bcard from './Bcard'
 
@@ -25,11 +25,38 @@ import Fantasy from '../assets/images/Fantasy.png'
 export default function Home() {
   const books =  useSelector(state => state.books.books);
   const popularBooks = books.filter(book => book.rating > 4.6)
+  const [client, setClient] = useState('Reader')
+  const [val, setVal] = useState('')
+  const [flag, setFlag] = useState(true)
+
+  useEffect(() => {
+    const clientName = sessionStorage.getItem('name')
+    console.log(clientName)
+    if(clientName){
+      setClient(clientName)
+      setFlag(true)
+    } else {
+      setFlag(false)
+    }
+  }, [])
+
+  function handleNameSubmit(e){
+    e.preventDefault();
+    setClient(val)
+    setFlag(true)
+    sessionStorage.setItem('name', val)
+  }
   
   return (
     <section className='sectionHome'>
+      <div className={flag ? 'askme_disable' : 'askme'}>
+        <form className='askme_form' onSubmit={handleNameSubmit}>
+          <input className='askme_form_input' onChange={(e) => setVal(e.target.value)} type="text" placeholder='Enter your name'/>
+          <button className='askme_form_button' type="submit">Submit</button>
+        </form>
+      </div>
       <div className="welcome_message">
-        <h1 className='welcome_salutation'>Welcome, Reader...</h1>
+        <h1 className='welcome_salutation'>Welcome, {client}...</h1>
         <p className='welcome_text'>Discover your next favorite book or explore a treasure trove of resources. Let’s turn the page together!</p>
       </div>
       <hr />

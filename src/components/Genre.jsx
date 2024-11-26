@@ -12,14 +12,12 @@ export default function Genre() {
   const genreFilteredBooks = genrebooks.filter(book => book.genre.includes(genre))
 
   const description = genreDesc.filter(genreInfo =>  genreInfo.genre == genre)[0]
-  console.log(description)
-  
 
   return (
     <div className='genreSection'>
       <div className="genreDetails">
         <h1 className='genreHead'>{genre}</h1>
-        <p className='genreText'>{description.desc}</p>
+        <p className='genreText'>{description ? description.desc : ''}</p>
       </div>
       <div className="genreBooks">
         {genreFilteredBooks.map((book) => <Bcard key={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} alt={book.title} title={book.title} author={book.author} rating={book.rating} desc={book.description}/>)}

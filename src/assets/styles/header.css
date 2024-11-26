@@ -10,7 +10,7 @@
   align-items: center;
   padding: 1.3em 2.1em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
-  z-index: 50;
+  z-index: 100;
 }
 
 .companName{
@@ -79,6 +79,7 @@
     width: 170px;
     padding: 10px;
     border-radius: 5px;
+    z-index: 50;
   }
 
   .burgerIcon{

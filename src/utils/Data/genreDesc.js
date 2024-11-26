@@ -42,5 +42,37 @@ export const genreDesc = [
   {
     genre: 'Dystopian',
     desc: 'The dystopian genre is a type of fictional writing that depicts a society in decline, where characters struggle against oppression, environmental ruin, and technological control. Dystopian works are often used to explore the darker aspects of human nature, and can be a way to provide new perspectives on social and political issues.'
+  },
+  {
+    genre: 'Classic',
+    desc: 'A classic is a novel that represents a genre or a writing style, or it can be a novel that makes a contribution to literature. There are all kinds of classics, from horror classics to romance classics, from novels that sold millions of copies to a novel that changed how a genre was written. Classics come from all cultures and all years, and classics can reflect a time period, a societal standard or may offer commentary on a subject. '
+  },
+  {
+    genre: 'Coming-of-Age',
+    desc: "A coming-of-age story focuses on detailing the growth of the protagonist from a child to an adult. The majority of these works typically follow pre-teens and teenagers who are traversing into the world of adulthood. This genre of literature has been around for centuries and can be found in children's stories, classic literature, contemporary novels, as well as in movies and television. It's a genre that is applicable to all of humanity, which makes it a meaningful and popular way in which to present various ideas regarding the maturation process."
+  },
+  {
+    genre: 'Epic',
+    desc: 'The story is centered on heroic characters, and the action takes place on a grand scale.'
+  }, 
+  {
+    genre: 'Drama',
+    desc: 'Drama is the specific mode of fiction represented in performance. The term comes from a Greek word meaning "action" (Classical Greek: δρᾶμα, drama), which is derived from "to do" or "to act" (Classical Greek: δράω, draō). The enactment of drama in theatre, performed by actors on a stage before an audience, presupposes collaborative modes of production and a collective form of reception. The structure of dramatic texts, unlike other forms of literature, is directly influenced by this collaborative production and collective reception.'
+  },
+  {
+    genre: 'Social Commentary',
+    desc: "Social commentary is the act of using rhetorical means to provide commentary on social, cultural, political, or economic issues in a society. This is often done with the idea of implementing or promoting change by informing the general populace about a given problem and appealing to people's sense of justice."
+  },
+  {
+    genre: 'Satire',
+    desc: 'Satire is primarily a literary genre or form, although in practice it can also be found in the graphic and performing arts. In satire, vices, follies, abuses, and shortcomings are held up to ridicule, ideally with the intent of shaming individuals, and society itself, into improvement. Although satire is usually meant to be funny, its greater purpose is often constructive social criticism, using wit as a weapon.'
+  },
+  {
+    genre: 'Young Adult',
+    desc: 'Young-adult fiction, whether in the form of novels or short stories, has distinct attributes that distinguish it from the other age categories of fiction. The vast majority of YA stories portray an adolescent as the protagonist, rather than an adult or a child. The subject matter and story lines are typically consistent with the age and experience of the main character, but beyond that YA stories span the entire spectrum of fiction genres.'
+  },
+  {
+    genre: 'Drama',
+    desc: 'Drama is the specific mode of fiction represented in performance. The term comes from a Greek word meaning "action" (Classical Greek: δρᾶμα, drama), which is derived from "to do" or "to act" (Classical Greek: δράω, draō). The enactment of drama in theatre, performed by actors on a stage before an audience, presupposes collaborative modes of production and a collective form of reception. The structure of dramatic texts, unlike other forms of literature, is directly influenced by this collaborative production and collective reception.'
   }
 ]
