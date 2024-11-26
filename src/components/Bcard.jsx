@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../assets/styles/bcard.css'
 
@@ -8,8 +8,8 @@ export default function Bcard(Props) {
       <div className="book_img">
         <img src={Props.src} alt={Props.title + 'image'} />
         <div className="books_buttons">
-          <p className='squareArrow'><Link to={`/book/${Props.title}`}><i className="fa-solid fa-arrow-up-right-from-square"></i></Link></p>
-          <p className='heart'><i className="fa-solid fa-heart"></i></p>
+          <p className='squareArrow'><Link className='squareArr' to={`/book/${Props.title}`}><i className="fa-solid fa-arrow-up-right-from-square"></i></Link></p>
+          <p className={Props.is_bookmarked ? 'heart_clicked' : 'heart'}>{Props.is_bookmarked ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}</p>
         </div>
       </div>
       <div className="book_details">

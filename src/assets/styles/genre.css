@@ -1,0 +1,92 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.genreBooks::-webkit-scrollbar{
+  height: 8px;
+}
+
+.genreBooks::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle (scrollbar thumb) */
+.genreBooks::-webkit-scrollbar-thumb{
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.genreBooks::-webkit-scrollbar-thumb{
+  background: #555;
+}
+
+.genreSection{
+  max-width: 1200px;
+  margin: 3em 0;
+  margin-inline: auto;
+}
+
+.genreDetails{
+  margin-bottom: 2em;
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+}
+
+.genreHead{
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.7em;
+}
+
+.genreHead:hover{
+  color: #555;
+}
+
+.genreText{
+  font-family: "Parkinsans", sans-serif;
+  font-size: .9em;
+  color: #333;
+}
+
+.genreBooks{
+  overflow-x: auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5em;
+  margin: 4em 0;
+}
+
+@media (max-width: 770px) {
+  .genreSection {
+      margin: 3em 0;
+      padding: .7em;
+  }
+
+  .genreBooks{
+    gap: 1em;
+  }
+
+  .genreText{
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 450px) {
+  .genreSection {
+      margin: 1em 0;
+      padding: .7em;
+  }
+
+  .genreBooks{
+    gap: 1em;
+  }
+
+  .genreText{
+    font-size: .8em;
+  }
+}

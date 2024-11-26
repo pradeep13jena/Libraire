@@ -6,7 +6,7 @@
 
 .bcard{
   width: 200px;
-  height: 480px;
+  height: 495px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
@@ -25,10 +25,48 @@
 }
 
 .books_buttons{
+  display: flex;
+  flex-direction: column;
+  width: 55px;
+  height: 80px;
+  border-radius: 0 0 0 28px;
+  padding: 18px;
+  justify-content: center;
+  gap: 9px;
+  background: rgb(0, 0, 0);
   position: absolute;
   top: 0;
   right: 0;
+  opacity: 0;
+  transition: all .2s;
 }
+
+.bcard:hover .books_buttons{
+  opacity: 1;
+}
+
+.squareArrow{
+  font-size: 1.3em;
+  color: rgb(255, 255, 255);
+}
+
+.heart, .heart_clicked{
+  font-size: 1.4em;
+  color: rgb(255, 255, 255);
+}
+
+.heart:hover, .heart_clicked:hover{
+  cursor: pointer;
+}
+
+.squareArr{
+  color: #fff;
+}
+
+.heart_clicked{
+  color: #FF0000;
+}
+
 
 .book_title, .book_author, .book_rating{
   margin-bottom: 7px;
@@ -49,10 +87,6 @@
   font-size: .8em;
 }
 
-.heart{
-  color: #FF0000;
-}
-
 .book_details{
   text-overflow: hidden;
 }
@@ -60,11 +94,12 @@
 @media (max-width: 760px){
 
   .bcard{
-    height: 430px;
+    width: 160px;
+    height: 450px;
   }
   .book_img img{
     width: 160px;
-    height: 190px;
+    height: 200px;
   }
   .book_title, .book_author{
     font-size: .9em;
@@ -78,4 +113,11 @@
     font-size: .8em;
   }
   
+  .squareArrow{
+    font-size: 1.2em;
+  }
+  
+  .heart, .heart_clicked{
+    font-size: 1.3em; 
+  }
 }

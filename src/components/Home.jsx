@@ -52,7 +52,7 @@ export default function Home() {
       <div className="viewPopularity">
         <h1 className='viewText'>or by <span className='textnamePopular'>Popularity</span></h1>
         <div className="popularBooks">
-          {popularBooks.map((book) => <Bcard key={book.id} src={book.image_url} alt={book.title} title={book.title} author={book.author} rating={book.rating} desc={book.description}/>)}
+          {popularBooks.map((book) => <Bcard key={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} alt={book.title} title={book.title} author={book.author} rating={book.rating} desc={book.description}/>)}
         </div>
       </div>
     </section>
