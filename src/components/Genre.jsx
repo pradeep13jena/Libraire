@@ -20,7 +20,7 @@ export default function Genre() {
         <p className='genreText'>{description ? description.desc : ''}</p>
       </div>
       <div className="genreBooks">
-        {genreFilteredBooks.map((book) => <Bcard key={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} alt={book.title} title={book.title} author={book.author} rating={book.rating} desc={book.description}/>)}
+        {genreFilteredBooks.map((book) => <Bcard key={book.id} id={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} alt={book.title} title={book.title} author={book.author} rating={book.rating} desc={book.description}/>)}
       </div>
     </div>
   )

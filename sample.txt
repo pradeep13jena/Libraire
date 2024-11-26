@@ -1,4 +1,2 @@
-Bookmark button
 add form button
 browse books
-welcome message

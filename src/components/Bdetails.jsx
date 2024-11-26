@@ -2,14 +2,19 @@ import React from 'react'
 import '../assets/styles/bdetails.css'
 import { Link, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { addItem } from '../utils/features/addBooks'
+import { addItem, bookmartIT } from '../utils/features/addBooks'
 
 export default function Bdetails(Props) {
   const {book} = useParams()
   const book1 = book.toLowerCase()
   const AllBook =  useSelector(state => state.books.books);
   const showBook = AllBook.filter(book => book.title.toLowerCase() == book1)[0]
-  console.log(showBook)
+
+  const books =  useSelector(state => state.books.books);
+  const dispatch = useDispatch()
+  function handleBookmark(hehe){
+    dispatch(bookmartIT({hehe}))
+  }
 
   return (
     <div className='bdetails_section'>
@@ -18,7 +23,7 @@ export default function Bdetails(Props) {
         <div className="bdetails_img">
           <img src={showBook.image_url} alt={showBook.title + ' book cover'} />
           <div className="bdetails_buttons">
-          <p className={showBook.is_bookmarked ? 'heart_clicked_bdetails' : 'heart_bdetails'}>{showBook.is_bookmarked ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}</p>
+          <p onClick={() => handleBookmark(showBook.id)} className={showBook.is_bookmarked ? 'heart_clicked_bdetails' : 'heart_bdetails'}>{showBook.is_bookmarked ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}</p>
           </div>
         </div>
         <div className="bdetails_written">

@@ -8,10 +8,15 @@ const booksSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-      state.book.push(action.payload)
+      state.books.push(action.payload)
+    },
+
+    bookmartIT: (state, action) => {
+      const id = action.payload.hehe
+      state.books = state.books.map(book => book.id == id ? { ...book, is_bookmarked: !book.is_bookmarked } : book)
     }
   }
 })
 
-export const {addItem} = booksSlice
+export const {addItem,  bookmartIT} = booksSlice.actions
 export default booksSlice.reducer 

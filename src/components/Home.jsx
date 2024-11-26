@@ -7,7 +7,7 @@ import '../assets/styles/home.css'
 
 // Store import
 import { useDispatch, useSelector } from 'react-redux'
-import { addItem } from '../utils/features/addBooks'
+import { addItem, bookmartIT } from '../utils/features/addBooks'
 
 // Image import
 import Adventure from '../assets/images/Adventure.png'
@@ -24,6 +24,7 @@ import Fantasy from '../assets/images/Fantasy.png'
 
 export default function Home() {
   const books =  useSelector(state => state.books.books);
+  const dispatch = useDispatch();
   const popularBooks = books.filter(book => book.rating > 4.6)
   const [client, setClient] = useState('Reader')
   const [val, setVal] = useState('')
@@ -31,7 +32,6 @@ export default function Home() {
 
   useEffect(() => {
     const clientName = sessionStorage.getItem('name')
-    console.log(clientName)
     if(clientName){
       setClient(clientName)
       setFlag(true)
@@ -79,7 +79,7 @@ export default function Home() {
       <div className="viewPopularity">
         <h1 className='viewText'>or by <span className='textnamePopular'>Popularity</span></h1>
         <div className="popularBooks">
-          {popularBooks.map((book) => <Bcard key={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} alt={book.title} title={book.title} author={book.author} rating={book.rating} desc={book.description}/>)}
+          {popularBooks.map((book) => <Bcard key={book.id} id={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} alt={book.title} title={book.title} author={book.author} rating={book.rating} desc={book.description}/>)}
         </div>
       </div>
     </section>

@@ -1,0 +1,64 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wishlistSection{
+  max-width: 1200px;
+  margin: 3em 0;
+  margin-inline: auto;
+}
+
+.wishlistDetails{
+  border-bottom: 2px solid black;
+  margin-bottom: 4em;
+}
+
+.wishlistHead{
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.7em;
+}
+
+.wishlistbooks{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5em;
+  overflow-x: auto;
+}
+
+.wishlistHead{
+  font-size: 1.7em;
+  color: #333;
+}
+
+.star{
+  color: #ffff00;
+}
+
+.noWish{
+  font-family: "Playfair Display", serif;
+  margin-bottom: 19.5em;
+  font-size: 1.5em;
+}
+
+@media (max-width: 770px){
+  .wishlistSection{
+    margin: 3em 0;
+    padding: .7em;
+  }
+
+  .wishlistHead{
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 450px){
+  .wishlistSection{
+    margin: 1em 0;
+    padding: .7em;
+  }
+}
