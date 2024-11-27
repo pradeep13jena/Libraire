@@ -7,15 +7,27 @@
 .footer{
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 1.3em;
   background-color: #333;
   font-size: 14px;
 }
 
 .footer-text{
+  font-size: 1em;
   color: white;
+  text-decoration: none;
   font-family: "Parkinsans", sans-serif;;
+}
+
+.footer-text a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-text a:active{
+  color: white;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
