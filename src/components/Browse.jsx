@@ -1,21 +1,21 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Bcard from './Bcard'
 import '../assets/styles/browse.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import BrowseBcard from './BrowseBcard'
 
 export default function Browse() {
   const AllBooks =  useSelector(state => state.books.books);
   const [boxIsOpen, setBoxIsOpen] = useState(false)
+  const [valu, setValu] = useState('')
+
   return (
     <div className='browseSection'>
       <div className="searchBar">
-          <input type="text" placeholder='Search by Title or Author' />
+          <input value={valu} onChange={(e) => setValu(e.target.value)} type="text" placeholder='Search by Title or Author' />
           <div className="browseBar">
-            <p onClick={() => {
-              setBoxIsOpen(!boxIsOpen)
-              console.log(boxIsOpen)
-            }} className='browseClick'>Browse Genres {boxIsOpen ? <i className="fa-solid fa-angle-up"></i> : <i className="fa-solid fa-angle-down"></i>}</p>
+            <p onClick={() => setBoxIsOpen(!boxIsOpen)} className='browseClick'>Browse Genres {boxIsOpen ? <i className="fa-solid fa-angle-up"></i> : <i className="fa-solid fa-angle-down"></i>}</p>
             <div className={boxIsOpen ? 'genreContainer-open' : 'genreContainer-close'}>
               <div className="genresubContainer"><Link className='genreLink' to={'/genre/Fiction'}>Fiction</Link></div>
               <div className="genresubContainer"><Link className='genreLink' to={'/genre/Romance'}>Romance</Link></div>
@@ -31,6 +31,9 @@ export default function Browse() {
           </div>
       </div>
       <div className="LotBooks">
+        {AllBooks
+          .filter(book => book.title.toLowerCase().includes(valu.toLowerCase()))
+          .map(book => <BrowseBcard key={book.id} id={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} pages={book.pages} alt={book.title} title={book.title} author={book.author} rating={book.rating} language={book.language}/>)}
       </div>
     </div>
   )
