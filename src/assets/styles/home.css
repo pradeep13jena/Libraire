@@ -140,7 +140,7 @@
 /* Popular Books */
 .popularBooks{
   display: flex;
-  gap: 1.3em;
+  gap: 1.5em;
   overflow-x: auto;
   margin-top: 2.5em;
 }

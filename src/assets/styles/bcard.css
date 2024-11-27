@@ -95,11 +95,11 @@
 
   .bcard{
     width: 160px;
-    height: 420px;
+    height: 440px;
   }
   .book_img img{
     width: 160px;
-    height: 193px;
+    height: 210px;
   }
   .book_title, .book_author{
     font-size: .9em;

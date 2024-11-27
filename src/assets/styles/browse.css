@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: .8em;
+  gap: 1.1em;
 }
 
 @media (max-width: 770px) {
