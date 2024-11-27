@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Bcard from './Bcard'
 import '../assets/styles/browse.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -11,7 +10,7 @@ export default function Browse() {
   const [valu, setValu] = useState('')
 
   return (
-    
+
     <div className='browseSection'>
       <div className="searchBar">
           <input value={valu} onChange={(e) => setValu(e.target.value)} type="text" placeholder='Search by Title or Author' />

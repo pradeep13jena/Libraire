@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../assets/styles/bcard.css'
-import '../assets/styles/BrowseBcard.css'
+import '../assets/styles/BrowseBCard.css'
 
 // Store import
 import { useDispatch, useSelector } from 'react-redux'
