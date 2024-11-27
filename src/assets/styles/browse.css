@@ -3,3 +3,31 @@
   margin: 0px;
   padding: 0px;
 }
+
+.browseSection{
+  max-width: 1200px;
+  margin: 3em 0;
+  margin-inline: auto;
+}
+
+.LotBooks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: .8em;
+}
+
+@media (max-width: 770px) {
+  .browseSection {
+      margin: 3em 0;
+      padding: .7em;
+  }
+}
+
+@media (max-width: 540px) {
+  .browseSection {
+    margin: 1em 0;
+    padding: .7em;
+  }
+}

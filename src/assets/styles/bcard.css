@@ -1,4 +1,4 @@
-*{
+  *{
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -94,12 +94,12 @@
 @media (max-width: 760px){
 
   .bcard{
-    width: 180px;
-    height: 440px;
+    width: 160px;
+    height: 420px;
   }
   .book_img img{
-    width: 180px;
-    height: 230px;
+    width: 160px;
+    height: 193px;
   }
   .book_title, .book_author{
     font-size: .9em;

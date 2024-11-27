@@ -1347,7 +1347,7 @@ const books = [
   {
     "id": 73,
     "title": "The Silence of the Lambs",
-    "description": "A psychological novel about a young FBI trainee who seeks the help of a brilliant but incarcerated serial killer to catch another serial killer.",
+    "description": "A novel about a young FBI trainee who seeks the help of a brilliant but incarcerated serial killer to catch another serial killer.",
     "image_url": "https://i.pinimg.com/736x/f5/cf/0f/f5cf0f8cca5b4b7e97a4da4fa7fe67f4.jpg",
     "author": "Thomas Harris",
     "genre": ["Horror", "Crime", "Thriller"],
