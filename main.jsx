@@ -9,6 +9,7 @@ import Addbooks from './src/components/Addbooks'
 import Wishlist from './src/components/Wishlist'
 import Genre from './src/components/Genre'
 import Bdetails from './src/components/Bdetails.jsx'
+import ErrorPage from './src/components/ErrorPage.jsx'
 
 import { store } from './src/utils/store.js'
 import { Provider } from 'react-redux'
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
+    errorElement: <ErrorPage/>, 
     children: [
       {
         path: '/',
