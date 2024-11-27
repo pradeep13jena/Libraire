@@ -3,8 +3,9 @@ import '../assets/styles/bdetails.css'
 import { Link, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { addItem, bookmartIT } from '../utils/features/addBooks'
+import ErrorPage from './ErrorPage'
 
-export default function Bdetails(Props) {
+export default function Bdetails(Props){
   const {book} = useParams()
   const book1 = book.toLowerCase()
   const AllBook =  useSelector(state => state.books.books);
@@ -17,7 +18,7 @@ export default function Bdetails(Props) {
   }
 
   return (
-    <div className='bdetails_section'>
+    showBook ? (<div className='bdetails_section'>
       <button className='backButton' onClick={() => history.back()}>&larr; Back</button>
       <div className="bdetails_info">
         <div className="bdetails_img">
@@ -41,6 +42,6 @@ export default function Bdetails(Props) {
             <p className='bdetails_summary'><b>Summary:&nbsp;&nbsp;&nbsp;</b>{showBook.description}</p>
         </div>
       </div>
-    </div>
+    </div>) : <ErrorPage/>
   )
 }

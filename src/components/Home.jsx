@@ -9,19 +9,6 @@ import '../assets/styles/home.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { addItem, bookmartIT } from '../utils/features/addBooks'
 
-// Image import
-import Adventure from '../assets/images/Adventure.png'
-import Crime from '../assets/images/Crime.jpeg'
-import Dystopian from '../assets/images/Dystopian.png'
-import Fiction from '../assets/images/Fiction.png'
-import Historical from '../assets/images/Historical.png'
-import Horror from '../assets/images/Horror.png'
-import Mystery from '../assets/images/Mystery.png'
-import Romance from '../assets/images/Romance.png'
-import Scifi from '../assets/images/Sci-fi.png'
-import Thriller from '../assets/images/Thriller.png'
-import Fantasy from '../assets/images/Fantasy.png'
-
 export default function Home() {
   const books =  useSelector(state => state.books.books);
   const dispatch = useDispatch();
@@ -63,17 +50,17 @@ export default function Home() {
       <div className="viewGenre">
         <h1 className='viewText'>View Books by <span className='textnameGenre'>Genre</span></h1>
         <div className="genreShoe">
-          <Link to={'genre/Mystery'}> <img src={Mystery} alt="Mystery" /> </Link>
-          <Link to={'genre/Romance'}> <img src={Romance} alt="Romance" /> </Link>
-          <Link to={'genre/Thriller'}> <img src={Thriller} alt="Thriller" /> </Link>
-          <Link to={'genre/Dystopian'}> <img src={Dystopian} alt="Dystopian" /> </Link>
-          <Link to={'genre/Horror'}> <img src={Horror} alt="Horror" /> </Link>
-          <Link to={'genre/Adventure'}> <img src={Adventure} alt="Adventure" /> </Link>
-          <Link to={'genre/Crime'}> <img src={Crime} alt="Crime" /> </Link>
-          <Link to={'genre/Science Fiction'}> <img src={Scifi} alt="Scifi" /> </Link>
-          <Link to={'genre/Fantasy'}> <img src={Fantasy} alt="Fantasy " /> </Link>
-          <Link to={'genre/Fiction'}> <img src={Fiction} alt="Fiction" /> </Link>
-          <Link to={'genre/Historical'}> <img src={Historical} alt="Historical" /> </Link>
+          <Link to={'genre/Mystery'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Mystery.png?updatedAt=1732715824411' alt="Mystery" /> </Link>
+          <Link to={'genre/Romance'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Romance.png?updatedAt=1732715829407' alt="Romance" /> </Link>
+          <Link to={'genre/Thriller'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Thriller.png?updatedAt=1732715829512' alt="Thriller" /> </Link>
+          <Link to={'genre/Dystopian'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Dystopian.png?updatedAt=1732715824140' alt="Dystopian" /> </Link>
+          <Link to={'genre/Horror'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Horror.png?updatedAt=1732715825306' alt="Horror" /> </Link>
+          <Link to={'genre/Adventure'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Adventure.png?updatedAt=1732715823244' alt="Adventure" /> </Link>
+          <Link to={'genre/Crime'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Crime.jpeg?updatedAt=1732715823304' alt="Crime" /> </Link>
+          <Link to={'genre/Science Fiction'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Sci-fi.png?updatedAt=1732715829215' alt="Scifi" /> </Link>
+          <Link to={'genre/Fantasy'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Fantasy.png?updatedAt=1732715823682' alt="Fantasy " /> </Link>
+          <Link to={'genre/Fiction'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Fiction.png?updatedAt=1732715825336' alt="Fiction" /> </Link>
+          <Link to={'genre/Historical'}> <img src='https://ik.imagekit.io/kf28wicizj/images/Historical.png?updatedAt=1732715823760' alt="Historical" /> </Link>
         </div>
       </div>
       <div className="viewPopularity">
