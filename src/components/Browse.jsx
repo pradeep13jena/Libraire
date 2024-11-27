@@ -11,6 +11,7 @@ export default function Browse() {
   const [valu, setValu] = useState('')
 
   return (
+    
     <div className='browseSection'>
       <div className="searchBar">
           <input value={valu} onChange={(e) => setValu(e.target.value)} type="text" placeholder='Search by Title or Author' />
@@ -32,7 +33,7 @@ export default function Browse() {
       </div>
       <div className="LotBooks">
         {AllBooks
-          .filter(book => book.title.toLowerCase().includes(valu.toLowerCase()))
+          .filter(book => book.title.toLowerCase().includes(valu.toLowerCase()) || book.author.toLowerCase().includes(valu.toLowerCase()))
           .map(book => <BrowseBcard key={book.id} id={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} pages={book.pages} alt={book.title} title={book.title} author={book.author} rating={book.rating} language={book.language}/>)}
       </div>
     </div>
