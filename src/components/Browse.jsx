@@ -9,7 +9,9 @@ export default function Browse() {
     <div className='browseSection'>
       <div className="searchBar">
         <input type="text" placeholder='Search by Title or Author' />
-        <div className='ShowGenreBar'></div>
+        <div className='ShowGenreBar'>
+          <h3>Browse Genres <i className="fa-solid fa-angle-down"></i></h3>
+        </div>
       </div>
       <div className="LotBooks">
         {AllBooks.map(book => <Bcard key={book.id} id={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} alt={book.title} title={book.title} author={book.author} rating={book.rating} desc={book.description}/>)}

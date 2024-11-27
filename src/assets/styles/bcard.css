@@ -94,12 +94,12 @@
 @media (max-width: 760px){
 
   .bcard{
-    width: 180px;
+    width: 160px;
     height: 450px;
   }
   .book_img img{
-    width: 180px;
-    height: 230px;
+    width: 160px;
+    height: 210px;
   }
   .book_title, .book_author{
     font-size: .9em;

@@ -18,6 +18,9 @@
   gap: .7em;
 }
 
+/* searchBar */
+
+
 @media (max-width: 770px) {
   .browseSection {
       margin: 3em 0;
