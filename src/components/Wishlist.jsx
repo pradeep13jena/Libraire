@@ -1,6 +1,5 @@
 import React from 'react'
 import Bcard from './Bcard'
-import emptyWish from '../assets/images/emptyWishlist.png'
 import '../assets/styles/wishlist.css'
 import { addItem } from '../utils/features/addBooks'
 import { useDispatch, useSelector } from 'react-redux'

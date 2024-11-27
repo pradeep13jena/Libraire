@@ -77,6 +77,10 @@
   font-size: 2.4em;
 }
 
+.heart_clicked_bdetails:hover, .heart_bdetails:hover{
+  cursor: pointer;
+}
+
 .bdetails_img img{
   width: 378px;
   height: 520px;
