@@ -140,7 +140,7 @@
 /* Popular Books */
 .popularBooks{
   display: flex;
-  gap: 1.5em;
+  gap: 1.4em;
   overflow-x: auto;
   margin-top: 2.5em;
 }
@@ -152,7 +152,7 @@
   }
 
   .welcome_salutation, .viewText{
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 
   .welcome_text{
