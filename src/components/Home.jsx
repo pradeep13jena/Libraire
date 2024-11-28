@@ -29,9 +29,11 @@ export default function Home() {
 
   function handleNameSubmit(e){
     e.preventDefault();
-    setClient(val)
-    setFlag(true)
-    sessionStorage.setItem('name', val)
+    if(val != ''){
+      setClient(val.trimEnd())
+      setFlag(true)
+      sessionStorage.setItem('name', val)
+    }
   }
   
   return (
@@ -39,7 +41,7 @@ export default function Home() {
       <div className={flag ? 'askme_disable' : 'askme'}>
         <form className='askme_form' onSubmit={handleNameSubmit}>
           <input className='askme_form_input' onChange={(e) => setVal(e.target.value)} type="text" placeholder='Enter your name'/>
-          <button className='askme_form_button' type="submit">Submit</button>
+          <button className={val ? 'askme_form_button-close' : 'askme_form_button-open'} type="submit">Submit</button>
         </form>
       </div>
       <div className="welcome_message">

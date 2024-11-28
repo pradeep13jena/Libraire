@@ -11,6 +11,11 @@ export default function Browse() {
 
   return (
     <>
+      <a className="arrow-upwards" href="#header">
+      <div>
+        <i className="fa-solid fa-arrow-up"></i>
+      </div>
+      </a>
       <div className="searchBar">
         <input value={valu} onChange={(e) => setValu(e.target.value)} type="text" placeholder='Search by Title or Author' />
         <div className="browseBar">
@@ -19,13 +24,13 @@ export default function Browse() {
             <div className="genresubContainer"><Link className='genreLink' to={'/genre/Fiction'}>Fiction</Link></div>
             <div className="genresubContainer"><Link className='genreLink' to={'/genre/Romance'}>Romance</Link></div>
             <div className="genresubContainer"><Link className='genreLink' to={'/genre/Science Fiction'}>Sci-Fi</Link></div>
+            <div className="genresubContainer"><Link className='genreLink' to={'/genre/Mystery'}>Mystery</Link></div>
             <div className="genresubContainer"><Link className='genreLink' to={'/genre/Thriller'}>Thriller</Link></div>
             <div className="genresubContainer"><Link className='genreLink' to={'/genre/Historical'}>Historical</Link></div>
-            <div className="genresubContainer"><Link className='genreLink' to={'/genre/Horror'}>Horror</Link></div>
-            <div className="genresubContainer"><Link className='genreLink' to={'/genre/Adventure'}>Adventure</Link></div>
-            <div className="genresubContainer"><Link className='genreLink' to={'/genre/Dystopian'}>Dystopian</Link></div>
             <div className="genresubContainer"><Link className='genreLink' to={'/genre/Fantasy'}>Fantasy</Link></div>
-            <div className="genresubContainer"><Link className='genreLink' to={'/genre/Mystery'}>Mystery</Link></div>
+            <div className="genresubContainer"><Link className='genreLink' to={'/genre/Dystopian'}>Dystopian</Link></div>
+            <div className="genresubContainer"><Link className='genreLink' to={'/genre/Adventure'}>Adventure</Link></div>
+            <div className="genresubContainer"><Link className='genreLink' to={'/genre/Horror'}>Horror</Link></div>
           </div>
       </div>
       </div>

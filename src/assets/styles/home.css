@@ -79,22 +79,34 @@ html, body{
   border-radius: 3px 0 0 3px;
   outline: none;
 }
-.askme_form_button{
+.askme_form_button-open{
   font-family: "Parkinsans", sans-serif;
   font-size: 1em;
   padding: 10px;
   border-radius: 0 3px 3px 0;
   border: none;
   outline: none;
-}
-
-.askme_form_button{
   background-color: #555;
   color: white;
 }
 
-.askme_form_button{
+.askme_form_button-close{
+  font-family: "Parkinsans", sans-serif;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 0 3px 3px 0;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+}
+
+.askme_form_button-close:hover{
   cursor: pointer;
+}
+
+.askme_form_button:hover{
+  background-color: #333;
 }
 
 /* viewGenre */

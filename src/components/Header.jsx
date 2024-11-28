@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className='header'>
+    <header id='header' className='header'>
       <div className='logoDiv'>
         <Link to={'/'} className='companName'>LIBRAIRE</Link>
       </div>

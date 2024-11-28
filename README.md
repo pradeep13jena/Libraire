@@ -7,7 +7,6 @@ Welcome to **Libraire**, the ultimate destination for book lovers! Whether you'r
 - [Design overview](#design-overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
 - [Future Improvments](#future-improvements)
 - [Links](#links)
 - [Credits](#credits)
@@ -51,24 +50,6 @@ The design of Efficiently is minimalistic, focusing on simplicity and ease of us
 - Redux
 - Vite
 
-## Project Structure
-
-/Libraire
-│
-├── /src
-│   ├── /assets
-│   │    ├── /styles        # CSS Files
-│   │
-│   ├── /components         # Components files
-│   │
-│   ├── /utils
-│        ├── /Data           # Static book data
-│        └── /Features       # Redux toolkit
-│   
-│
-└──── /index.html         # Main HTML entry point
-
-
 ## Future Improvements
 
 - **Personalized Recommendations**: Get book suggestions tailored to your tastes based on previous reads and ratings.
@@ -89,6 +70,6 @@ The design of Efficiently is minimalistic, focusing on simplicity and ease of us
 
 ## Contact
 
-- **[Portfolio Project]**(https://pradeepjena.netlify.app/)
-- **[E-MAIL]**(goldrushatjenas@gmail.com)
-- **[LinkedIn]**(https://www.linkedin.com/in/pradeepjena/)
+- [Portfolio Project](https://pradeepjena.netlify.app/)
+- [E-MAIL](goldrushatjenas@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/pradeepjena/)
