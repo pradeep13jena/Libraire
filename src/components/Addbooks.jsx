@@ -17,7 +17,7 @@ export default function Addbooks() {
       <form className='addBooks_Form'>
         <div className="divforBookTitle">
           <label className={titleFocus || titleValue?'addBooks_title_label-notFocus' : 'addBooks_author_label-focus'} htmlFor="book_title">Book Title</label> <br />
-          <input  onChange={(e) => settitleValue(e.target.value)} onFocus={() => setTitleFocus(true)} onBlur={() => setTitleFocus(false)} type="text" id='book_title'className='addBooks_title_class'/>
+          <input onChange={(e) => settitleValue(e.target.value)} onFocus={() => setTitleFocus(true)} onBlur={() => setTitleFocus(false)} type="text" id='book_title'className='addBooks_title_class'/>
         </div>
         <div className="divforBookAuthor">
           <label className={authorFocus || authorValue ?'addBooks_author_label-notFocus' : 'addBooks_author_label-focus'} htmlFor="book_author">Author Name</label> <br />
@@ -39,14 +39,16 @@ export default function Addbooks() {
             <input  onChange={(e) => setgenreValue(e.target.value)} onFocus={() => setGenreFocus(true)} onBlur={() => setGenreFocus(false)} type="text" name="addBook_bookGenre" className='addBook_bookGenre_class' id="book_genre" />
           </div>
           <div className="divforFormat">
-            <label className='addBooks_format_label' htmlFor="boook_format">Format:</label> <br />
+            <label className='addBooks_format_label-focus' htmlFor="boook_format">Format:</label> <br />
             <input type="text" value='Hardcover' disabled name="addBook_bookLang" className='addBook_bookFormat_class' id="boook_format" />
           </div>
         </div>
         <div className="divfor_bookDesc">
-            <label className='addBooks_desc_label' htmlFor="book_desc">Description</label><br />
-            <textarea placeholder='Not more than 170 characters' name="addBook_bookDesc" id="book_desc" className='addBook_bookDesc_class'></textarea>
+            <label className='addBooks_desc_label-focus' htmlFor="book_desc">Description</label><br />
+            <textarea placeholder='Should not more than 170 characters' name="addBook_bookDesc" id="book_desc" className='addBook_bookDesc_class'></textarea>
         </div>
+        <button className='addBooks_submit' type="submit">Submit Book</button>
+
       </form>
     </div>
   )
