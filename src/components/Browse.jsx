@@ -1,13 +1,23 @@
 import React, {useState, useEffect} from 'react'
 import '../assets/styles/browse.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import BrowseBcard from './BrowseBcard'
 
 export default function Browse() {
   const AllBooks =  useSelector(state => state.books.books);
   const [boxIsOpen, setBoxIsOpen] = useState(false)
   const [valu, setValu] = useState('')
+
+  const location = useLocation()
+  const queryParams = new URLSearchParams(location.search);
+  const highlightedBookId = queryParams.get('highlight');
+
+  useEffect(() => {
+    if(highlightedBookId){
+      document.getElementById(highlightedBookId).scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  })
 
   return (
     <>
@@ -38,7 +48,7 @@ export default function Browse() {
         <div className="LotBooks">
           {AllBooks
             .filter(book => book.title.toLowerCase().includes(valu.toLowerCase()) || book.author.toLowerCase().includes(valu.toLowerCase()))
-            .map(book => <BrowseBcard key={book.id} id={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} pages={book.pages} alt={book.title} title={book.title} author={book.author} rating={book.rating} language={book.language}/>)}
+            .map(book => <BrowseBcard highli={book.id == highlightedBookId ? true : false} key={book.id} id={book.id} is_bookmarked={book.is_bookmarked} src={book.image_url} pages={book.pages} alt={book.title} title={book.title} author={book.author} rating={book.rating} language={book.language}/>)}
         </div>
       </div>
     </>

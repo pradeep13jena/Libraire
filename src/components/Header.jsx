@@ -5,11 +5,6 @@ import '../assets/styles/header.css'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-
-  };
-
   return (
     <header id='header' className='header'>
       <div className='logoDiv'>
@@ -22,7 +17,7 @@ export default function Header() {
         <Link to={'/Wishlist'} className='wishlist'>Wishlist</Link>
       </div>
       <div className="burgerIcon">
-        <button onClick={toggleMenu} className="menu-icon">
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="menu-icon">
           <i className="fa-solid fa-bars"></i>
         </button>
       </div>

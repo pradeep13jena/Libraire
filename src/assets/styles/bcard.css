@@ -49,6 +49,10 @@
   opacity: 1;
 }
 
+.BrowsebcardHighlighted:hover .books_buttons{
+  opacity: 1;
+}
+
 .squareArrow{
   font-size: 1.3em;
   color: rgb(255, 255, 255);

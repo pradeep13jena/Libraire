@@ -9,10 +9,12 @@ import { genreDesc } from '../utils/Data/genreDesc'
 
 export default function Genre() {
   const {genre} = useParams()
+  const genreCapital = genre.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ').trim();
+  console.log(genreCapital)
   const genrebooks =  useSelector(state => state.books.books);
-  const genreFilteredBooks = genrebooks.filter(book => book.genre.includes(genre))
+  const genreFilteredBooks = genrebooks.filter(book => book.genre.includes(genreCapital))
 
-  const description = genreDesc.filter(genreInfo =>  genreInfo.genre == genre)[0]
+  const description = genreDesc.filter(genreInfo =>  genreInfo.genre.toLowerCase() == genre.toLowerCase())[0]
 
   return (
     <div className='genreSection'>

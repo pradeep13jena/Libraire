@@ -4,19 +4,50 @@
   padding: 0px;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .addBooks_Section{
-  max-width: 500px;
-  margin: 2.7em 0;
+  /* max-width: 500px; */
+  max-width: 1300px;
+  margin: 2em 0;
   margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 3em;
+  padding-top: 1.2em;
+}
+
+.exampleBar{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;  
+  gap: 3em;
+  padding-top: 1.5em;
+}
+
+.Form_Section{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .addBooks_Form{
+  width: 90%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
   gap: .7em;
 }
 
-.divforBookTitle, .divforBookAuthor{
+.divforBookTitle, .divforBookAuthor, .addBooks_submit{
   width: 100%;
 }
 
@@ -24,7 +55,7 @@
   width: 100%;
 }
 
-.addBooks_div1, .addBooks_div2{
+.addBooks_div1, .addBooks_div2 .addBooks_div2{
   width: 100%;
   display: flex;
   gap: .7em;
@@ -34,18 +65,18 @@
   width: 100%;
 }
 
-.divforBookTitle, .divforBookAuthor, .divforBookPage, .divfor_bookLang, .divforGenre, .divfor_bookDesc, .divforFormat, .divfor_bookDesc{
-  width: 100% ;
+.divforBookImage_URL, .divforBookTitle, .divforBookAuthor, .divforBookPage, .divfor_bookLang, .divforGenre, .divfor_bookDesc, .divforFormat, .divfor_bookDesc{
+  width: 100%;
   position: relative;
 }
 
-.addBook_bookPage_class, .addBook_bookLang_class, .addBook_bookGenre_class, .addBook_bookFormat_class, .addBook_bookDesc_class{
+.addBooks_image_class, .addBook_bookPage_class, .addBook_bookLang_class, .addBook_bookGenre_class, .addBook_bookFormat_class, .addBook_bookDesc_class{
   width: 100%;
 }
 
-.addBooks_title_class, .addBooks_author_class, .addBook_bookPage_class, .addBook_bookLang_class, .addBook_bookGenre_class, .addBook_bookFormat_class, .addBooks_submit{
+.addBooks_image_class, .addBooks_title_class, .addBooks_author_class, .addBook_bookPage_class, .addBook_bookLang_class, .addBook_bookGenre_class, .addBook_bookFormat_class, .addBooks_submit{
   font-family: "Parkinsans", sans-serif;
-  font-size: 1.1em;
+  font-size: 1em;
   padding: .5em .6em;
   border-radius: 4px;
   border: none;
@@ -69,26 +100,112 @@
   outline: none;
   border: 1px solid #333;
   height: 10em;
+  resize: none;
 }
 
-.addBooks_title_label-focus, .addBooks_author_label-focus, .addBooks_page_label-focus, .addBooks_lang_label-focus, .addBooks_format_label-notFocus, .addBooks_genre_label-focus{
+.addBooks_image_label-focus, .addBooks_title_label-focus, .addBooks_author_label-focus, .addBooks_page_label-focus, .addBooks_lang_label-focus, .addBooks_format_label-notFocus, .addBooks_genre_label-focus{
   font-family: "Parkinsans", sans-serif;
   font-size: 1em;
   position: absolute;
   left: .66em;
-  top: 1.9em;
+  top: 1.8em;
   transition: 0.2s ease all;
 }
 
-.addBooks_title_label-notFocus, .addBooks_author_label-notFocus, .addBooks_page_label-notFocus, .addBooks_lang_label-notFocus, .addBooks_format_label-focus, .addBooks_genre_label-notFocus, .addBooks_desc_label-focus{
+.addBooks_image_label-notFocus, .addBooks_title_label-notFocus, .addBooks_author_label-notFocus, .addBooks_page_label-notFocus, .addBooks_lang_label-notFocus, .addBooks_format_label-focus, .addBooks_genre_label-notFocus, .addBooks_desc_label-focus{
   font-family: "Parkinsans", sans-serif;
   font-size: .8em;
   position: absolute;
   left: .5em;
-  top: 8px;
+  top: 7px;
   transition: 0.2s ease-in-out all;
   background-color: white;
   padding: 0 6px;
+}
+
+.bookDetails_Info{
+  padding: .5em 1em;
+  padding-left: 1em;
+  border-left: 3px solid #00FF00;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: all .2s;
+}
+
+.bookDetails_Info:hover{
+  background-color: #D6FFD6;
+  border-radius: 5px;
+}
+
+.book_Constraints_header{
+  font-family: "Parkinsans", sans-serif;
+  font-size: 1em;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
+.book_example_header{
+  font-family: "Parkinsans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  padding: .8em 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ex1{
+  font-family: "Parkinsans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.books_constraints{
+  padding-left: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Parkinsans", sans-serif;
+  font-size: .9em;
+}
+
+.exampleForBooks{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  width: 100%;
+}
+
+.exampleForBook{
+  width: 100%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.exampleList-open{
+  word-wrap: break-word;
+  padding: .9em .5em;
+  font-family: "Parkinsans", sans-serif;
+  font-size: .8em;
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+  transition: all .2s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.exampleList-close{
+  display: none;
+  transition: all .2s;
 }
 
 @media (max-width: 770px) {
@@ -104,22 +221,46 @@
       margin: 1em 0;
       margin-inline: auto;
       padding: .7em;
+      flex-direction: column-reverse;
+      gap: 4em;
+  }
+
+  .Form_Section{
+    width: 100%;
   }
 
   .addBooks_Form{
     gap: .4em;
+    width: 100%;
   }
 
-  .addBooks_title_class, .addBooks_author_class, .addBook_bookPage_class, .addBook_bookLang_class, .addBook_bookGenre_class, .addBook_bookFormat_class{
+  .exampleBar{
+    width: 100%;
+  }
+
+  .addBooks_image_class, .addBooks_title_class, .addBooks_author_class, .addBook_bookPage_class, .addBook_bookLang_class, .addBook_bookGenre_class, .addBook_bookFormat_class{
     font-size: .9em;
     height: 3em;
   }
 
-  .addBooks_title_label-focus, .addBooks_author_label-focus, .addBooks_page_label-focus, .addBooks_lang_label-focus, .addBooks_format_label-notFocus, .addBooks_genre_label-focus{
+  .addBooks_image_label-focus, .addBooks_title_label-focus, .addBooks_author_label-focus, .addBooks_page_label-focus, .addBooks_lang_label-focus, .addBooks_format_label-notFocus, .addBooks_genre_label-focus{
     font-size: .9em;
   }
 
-  .addBooks_title_label-focus, .addBooks_author_label-focus, .addBooks_page_label-focus, .addBooks_lang_label-focus, .addBooks_format_label-notFocus, .addBooks_genre_label-focus{
+  .addBooks_image_label-focus, .addBooks_title_label-focus, .addBooks_author_label-focus, .addBooks_page_label-focus, .addBooks_lang_label-focus, .addBooks_format_label-notFocus, .addBooks_genre_label-focus{
     top: 2em;
+  }
+
+  .bookDetails_Info{
+    font-size: 1em;
+  }
+
+  .books_constraints{
+    font-size: .8em;
+  }
+
+  .exampleList-open{
+    font-size: .7em;
+    padding: .8em 1em;
   }
 }

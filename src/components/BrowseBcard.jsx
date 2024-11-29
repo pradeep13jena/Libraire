@@ -9,14 +9,13 @@ import { addItem, bookmartIT } from '../utils/features/addBooks'
 
 export default function BrowseBcard(Props) {
   const books =  useSelector(state => state.books.books);
-
   const dispatch = useDispatch()
   function handleBookmark(hehe){
     dispatch(bookmartIT({hehe}))
   }
 
   return (
-    <div className="Browsebcard">
+    <div id={Props.id} className={Props.highli ? 'BrowsebcardHighlighted' : 'Browsebcard'}>
       <div className="Browse_book_img">
         <img src={Props.src} alt={Props.title + 'image'} />
         <div className="books_buttons">

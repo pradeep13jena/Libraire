@@ -8,7 +8,8 @@ const booksSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-      state.books.push(action.payload)
+      state.books.push(action.payload.newOBJ)
+      console.log(action.payload.newOBJ)
     },
 
     bookmartIT: (state, action) => {
