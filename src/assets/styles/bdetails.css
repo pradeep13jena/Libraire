@@ -146,4 +146,8 @@
   .bdetails_author{
     font-size: 1.1em;
   }
+
+  .bdetails_written{
+    align-self: flex-start;
+  }
 }

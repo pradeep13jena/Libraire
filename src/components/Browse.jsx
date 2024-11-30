@@ -17,7 +17,7 @@ export default function Browse() {
     if(highlightedBookId){
       document.getElementById(highlightedBookId).scrollIntoView({ behavior: "smooth", block: "center" });
     }
-  })
+  }, [])
 
   return (
     <>

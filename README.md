@@ -33,8 +33,9 @@ The design of Efficiently is minimalistic, focusing on simplicity and ease of us
 
 - **Header**: It consists of Header which has the logo of the website, and links to different pages such as *Browse Page*, *Add Books Page* and *Wishlist*.
 - **Footer**: In the footer section, There's the copyright message and my email address.
-- **Main**: In the main page, it consists of two section, first section in which you can search books through Genre. If you click on the genre you will be headed to page, */genre/Historical*. These pages will show you books according to the Genre clicked/searched. and in the second section you can search books through popularity. Books which has rating above `4.6`.
+- **Main**: In the main page, it consists of two section, first section in which you can search books through Genre. If you click on the genre you will be headed to page, */genre/Historical*. These pages will show you books according to the Genre clicked/searched. and in the second section you can search books through popularity. Books which has rating above `4.6`
 -**Browse**: All the books in the database gets listed here Scroll down and choose your book or you can enter Author or Title of the book or you can search books through genres.
+-**Add Page**: In this you will be able to add new and unique books by your own.
 -**Wishlist**: Whichever book you like or heart will get saved over here. Keep them as a reminder to read them later.
 
 ## Features
@@ -71,5 +72,5 @@ The design of Efficiently is minimalistic, focusing on simplicity and ease of us
 ## Contact
 
 - [Portfolio Project](https://pradeepjena.netlify.app/)
-- [E-MAIL](goldrushatjenas@gmail.com)
+- [E-mail](goldrushatjenas@gmail.com)
 - [LinkedIn](https://www.linkedin.com/in/pradeepjena/)
