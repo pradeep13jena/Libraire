@@ -34,7 +34,7 @@ export default function Wishlist() {
       </div>
     </div>
   ) : (
-      <h1 className='noWish'>Haven't found a favorite yet? Browse through our selection and add books to your bookmarks!</h1>
+      <h1 className='noWish'>Haven't found a favorite yet? Browse through our selection and add books to your wishlist!</h1>
   )}
 </div>
 )}

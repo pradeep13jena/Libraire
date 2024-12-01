@@ -10,7 +10,6 @@ export default function Bdetails(Props){
   const book1 = book.toLowerCase()
   const AllBook =  useSelector(state => state.books.books);
   const showBook = AllBook.filter(book => book.title.toLowerCase() == book1)[0]
-
   const books =  useSelector(state => state.books.books);
   const dispatch = useDispatch()
   function handleBookmark(hehe){
@@ -33,6 +32,7 @@ export default function Bdetails(Props){
               <h3 className='bdetails_author'>{showBook.author}</h3>
             </div>
             <p className='bdetails_pages'><b>Page:&nbsp;&nbsp;&nbsp;</b>{showBook.pages}</p>
+            <p className='bdetails_rating'><b>Rating:&nbsp;&nbsp;&nbsp;</b>{showBook.rating}</p>
             <p className='bdetails_Language'><b>Language:&nbsp;&nbsp;&nbsp;</b>{showBook.language} </p>
             <p className='bdetails_format'><b>Format:&nbsp;&nbsp;&nbsp;</b>{showBook.format}</p>
             <p className='bdetails_genres'>

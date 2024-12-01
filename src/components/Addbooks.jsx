@@ -45,7 +45,7 @@ export default function Addbooks() {
         title: formValues.addBook_bookTitle,
         author: formValues.addBook_bookAuthor,
         language: formValues.addBook_bookLang,
-        pages: formValues.addBook_bookGenre,
+        pages: formValues.addBook_bookPage,
         genre: newGen,
         format: "Hardcover",
         description: formValues.addBook_bookDesc,
@@ -61,6 +61,7 @@ export default function Addbooks() {
     const errors = {}
     const imageRegex = /^https?:\/\/.*\.(jpg|jpeg|png|gif|bmp|webp|svg)$/i;
     const nameRegex = /^[a-zA-Z]+([ '-][a-zA-Z]+)*$/
+    const titleRegex = /^[A-Za-z0-9.,:;'"!?()&\-\s]{2,200}$/
     const pagesRegex = /^[1-9][0-9]*$/;
     const ratingRegex = /^[1-5](\.[0-9])?$/;
     const languageRegex = /^[a-zA-Z\s]+$/;
@@ -117,14 +118,14 @@ export default function Addbooks() {
   const [exampleOne, setExampleOne] = useState(false);
   const [exampleTwo, setExampleTwo] = useState(false);
 
-  const [imageValue, setImageValue] = useState("");
-  const [authorValue, setauthorValue] = useState("");
-  const [titleValue, settitleValue] = useState("");
-  const [pageValue, setpageValue] = useState("");
-  const [langugaeValue, setlangugaeValue] = useState("");
-  const [genreValue, setgenreValue] = useState("");
-  const [descValue, setdescValue] = useState("");
-  const [ratingValue, setRatingValue] = useState("");
+  // const [imageValue, setImageValue] = useState("");
+  // const [authorValue, setauthorValue] = useState("");
+  // const [titleValue, settitleValue] = useState("");
+  // const [pageValue, setpageValue] = useState("");
+  // const [langugaeValue, setlangugaeValue] = useState("");
+  // const [genreValue, setgenreValue] = useState("");
+  // const [descValue, setdescValue] = useState("");
+  // const [ratingValue, setRatingValue] = useState("");
 
   const [imageFocus, setImageFocus] = useState(false);
   const [authorFocus, setAuthorFocus] = useState(false);
