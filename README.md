@@ -44,11 +44,16 @@ The design of Libraire is minimalistic, focusing on simplicity and ease of use. 
 
 - **Wishlist**: Whichever book you like or heart will get saved over here. Keep them as a reminder to read them later.
 
-**Responsive Design**: 
+#### Responsive Design: 
 Website is responsive, it can be used on different device with varying width & height. Few example are
 - Laptop
 - Ipan mini
 - Samsung Galaxy S10 Ultra
+
+#### Leveraging **ImageKit** for Optimized Image Rendering
+- I had 10-11 images in the folder which when opened in a new device takes time to load, I didn't wanted that to happen, to improve user experience. I got to know about *ImageKit* which functions as a Content Delivery Network (CDN), which means images are served from the server closest to the user's location. This significantly improves load times, especially for users accessing the website from different parts of the world.
+
+- By uploading images to ImageKit instead of storing them in the project folder, I’ve managed to save considerable storage space in the repository. This not only reduces the size of the project but also ensures that local storage isn’t overburdened.
 
 ## Features
 
@@ -104,6 +109,7 @@ Website is responsive, it can be used on different device with varying width & h
 - React, React-DOM, React-Router-Dom
 - Redux
 - Vite
+- ImageKit
 
 ## Future Improvements
 
@@ -122,6 +128,7 @@ Website is responsive, it can be used on different device with varying width & h
 - [React Router DOM documents](https://reactrouter.com/en/main/start/tutorial)
 - [Redux documents](https://redux-toolkit.js.org/introduction/getting-started)
 - [W3 school](https://www.w3schools.com/)
+- [imagekit](https://imagekit.io/)
 
 ## Contact
 

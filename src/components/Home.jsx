@@ -12,7 +12,7 @@ import { addItem, bookmartIT } from '../utils/features/addBooks'
 export default function Home() {
   const books =  useSelector(state => state.books.books);
   const dispatch = useDispatch();
-  const popularBooks = books.filter(book => book.rating > 4.6)
+  const popularBooks = books.filter(book => book.rating > 4.6).sort(({rating:a}, {rating:b}) => b-a)
   const [client, setClient] = useState('Reader')
   const [val, setVal] = useState('')
   const [flag, setFlag] = useState(true)

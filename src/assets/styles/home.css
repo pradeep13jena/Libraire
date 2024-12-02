@@ -9,23 +9,23 @@ html, body{
 }
 /* Scrollbar details */
 
-.genreShoe::-webkit-scrollbar, .popularBooks::-webkit-scrollbar{
+.genreShoe::-webkit-scrollbar, .popularBooks::-webkit-scrollbar, .wishlistbooks::-webkit-scrollbar{
   height: 8px;
 }
 
-.genreShoe::-webkit-scrollbar-track, .popularBooks::-webkit-scrollbar-track{
+.genreShoe::-webkit-scrollbar-track, .popularBooks::-webkit-scrollbar-track, .wishlistbooks::-webkit-scrollbar-track{
   background: #f1f1f1;
   border-radius: 10px;
 }
 
 /* Handle (scrollbar thumb) */
-.genreShoe::-webkit-scrollbar-thumb, .popularBooks::-webkit-scrollbar-thumb{
+.genreShoe::-webkit-scrollbar-thumb, .popularBooks::-webkit-scrollbar-thumb, .wishlistbooks::-webkit-scrollbar-thumb{
   background: #888;
   border-radius: 10px;
 }
 
 /* Handle on hover */
-.genreShoe::-webkit-scrollbar-thumb:hover, .popularBooks::-webkit-scrollbar-thumb:hover{
+.genreShoe::-webkit-scrollbar-thumb:hover, .popularBooks::-webkit-scrollbar-thumb:hover, .wishlistbooks::-webkit-scrollbar-thumb:hover{
   background: #555;
 }
 

@@ -53,7 +53,7 @@ export default function Addbooks() {
         rating: formValues.addBook_bookRating,
       };
       dispatch(addItem({ newOBJ }));
-      navigate(`/browse?highlight=${books.length + 1}`); 
+      navigate(`/browse?Highlight=${books.length + 1}`); 
     }
   }
 
@@ -61,9 +61,8 @@ export default function Addbooks() {
     const errors = {}
     const imageRegex = /^https?:\/\/.*\.(jpg|jpeg|png|gif|bmp|webp|svg)$/i;
     const nameRegex = /^[a-zA-Z]+([ '-][a-zA-Z]+)*$/
-    const titleRegex = /^[A-Za-z0-9.,:;'"!?()&\-\s]{2,200}$/
-    const pagesRegex = /^[1-9][0-9]*$/;
-    const ratingRegex = /^[1-5](\.[0-9])?$/;
+    const pagesRegex = /\b([1-9][0-9]{0,2}|1[0-4][0-9]{2}|1500)\b/;
+    const ratingRegex = /^(1(\.[0-9])?|2(\.[0-9])?|3(\.[0-9])?|4(\.[0-9])?|5(\.0)?)$/
     const languageRegex = /^[a-zA-Z\s]+$/;
     const genreRegex = /^[a-zA-Z\s,]+$/;
 
@@ -86,7 +85,7 @@ export default function Addbooks() {
     if(!values.addBook_bookPage){
       errors.addBook_bookPage = 'Number of pages is required!'
     } else if(!pagesRegex.test(values.addBook_bookPage)){
-      errors.addBook_bookPage = 'Pages should be greater than 0!'
+      errors.addBook_bookPage = 'Pages should in between 1 to 1500!'
     }
 
     if(!values.addBook_bookRating){
@@ -148,7 +147,7 @@ export default function Addbooks() {
           <ol className="books_constraints">
             <li>All of the fields are compulsory.</li>
             <li>Image should consist of URL of the Image.</li>
-            <li>Rating should be a number between (1 to 5).</li>
+            <li>Rating should be a number between (1.0 to 5.0).</li>
             <li>Page should contain the total number of pages in the book.</li>
             <li>If there is more than 1 genre, Separate them by coma.</li>
           </ol>
@@ -413,7 +412,6 @@ export default function Addbooks() {
                 onChange={handleChange}
                 onFocus={() => setratingFocuc(true)}
                 onBlur={() => setratingFocuc(false)}
-                type="number"
                 name="addBook_bookRating"
                 className="addBook_bookFormat_class"
                 id="boook_format"

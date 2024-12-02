@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+  import React, {useState, useEffect} from 'react'
 import '../assets/styles/browse.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation } from 'react-router-dom'
@@ -11,8 +11,7 @@ export default function Browse() {
 
   const location = useLocation()
   const queryParams = new URLSearchParams(location.search);
-  const highlightedBookId = queryParams.get('highlight');
-
+  const highlightedBookId = queryParams.get('Highlight');
   useEffect(() => {
     if(highlightedBookId){
       document.getElementById(highlightedBookId).scrollIntoView({ behavior: "smooth", block: "center" });
